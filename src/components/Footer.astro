@@ -1,0 +1,27 @@
+---
+const date = new Date().getFullYear();
+---
+
+<footer class="wrapper footer-wrapper">
+  <div class="footer-container">
+    <router-link to="/">
+      <img src="/logo.svg" class="brand-logo" />
+    </router-link>
+
+    <h4>
+      Ronde Maestro, h&eacute;t wielerspel waarbij je dagelijks dezelfde kansen
+      hebt!
+    </h4>
+    <ul class="footer-links">
+      <li><a href="/privacy">Privacy Policy</a></li>
+      <li><a href="/voorwaarden">Algemene voorwaarden</a></li>
+      <li><a href="/spelregels">Spelregels</a></li>
+      <li><a href="mailto:rondemaestro@gmail.com">Mail ons</a></li>
+    </ul>
+    <div class="copyright">
+      <p>
+        &copy; 2020 - {date} Ronde Maestro door Zweers Design
+      </p>
+    </div>
+  </div>
+</footer>

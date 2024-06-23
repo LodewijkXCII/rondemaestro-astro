@@ -1,0 +1,108 @@
+.primary-header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+}
+
+.nav-wrapper {
+  --_animationStartsAfter: 5vh;
+  --_animationDistance: 50px;
+
+  padding: 1rem 2rem;
+  background-color: var(--clr-primary-mute);
+  grid-column: content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  animation: stickyNav linear forwards;
+
+  @supports (animation-timeline: view()) {
+    animation-timeline: view();
+    animation-range-start: calc(100vh + var(--_animationStartsAfter));
+    animation-range-end: calc(
+      100vh + var(--_animationStartsAfter) + var(--_animationDistance)
+    );
+  }
+
+  @keyframes stickyNav {
+    100% {
+      background-color: var(--clr-background);
+      border-radius: 0 0 1rem 1rem;
+
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 3rem);
+    font-weight: 800;
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    color: var(--clr-text);
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus {
+    color: var(--clr-primary);
+  }
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .primary-navigation {
+    display: none;
+    position: absolute;
+    padding: 4rem 2rem;
+    top: calc(100% - 1rem);
+    right: 0;
+    left: 0;
+
+    background: var(--clr-background);
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .primary-header[data-overlay]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
+  }
+
+  .nav-wrapper .nav-list {
+    display: grid;
+    text-align: right;
+    font-weight: 800;
+
+    button {
+      margin-right: 0;
+    }
+  }
+
+  .primary-navigation[data-visible] {
+    display: block;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: fixed;
+
+    right: 1rem;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5em;
+  }
+
+  .mobile-nav-toggle .icon-close {
+    display: none;
+  }
+}
