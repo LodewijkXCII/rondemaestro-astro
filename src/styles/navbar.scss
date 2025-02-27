@@ -21,9 +21,7 @@
   @supports (animation-timeline: view()) {
     animation-timeline: view();
     animation-range-start: calc(100vh + var(--_animationStartsAfter));
-    animation-range-end: calc(
-      100vh + var(--_animationStartsAfter) + var(--_animationDistance)
-    );
+    animation-range-end: calc(100vh + var(--_animationStartsAfter) + var(--_animationDistance));
   }
 
   @keyframes stickyNav {
@@ -57,7 +55,7 @@
   display: none;
 }
 
-@media (max-width: 50em) {
+@media (max-width: 780px) {
   .primary-navigation {
     display: none;
     position: absolute;
