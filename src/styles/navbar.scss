@@ -51,6 +51,10 @@
   }
 }
 
+.link-active > * {
+  color: var(--clr-primary);
+}
+
 .mobile-nav-toggle {
   display: none;
 }

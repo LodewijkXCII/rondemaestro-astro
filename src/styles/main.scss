@@ -153,7 +153,9 @@ a.btn,
   &.primary {
     background: var(--clr-primary);
     color: var(--clr-text-white);
-    transition: background 200ms ease-in, color 200ms ease-in;
+    transition:
+      background 200ms ease-in,
+      color 200ms ease-in;
 
     &:hover {
       background: transparent;
@@ -165,7 +167,9 @@ a.btn,
   &.action {
     background: var(--clr-secondary);
     color: var(--clr-text-black);
-    transition: background 200ms ease-in, color 200ms ease-in;
+    transition:
+      background 200ms ease-in,
+      color 200ms ease-in;
 
     &:hover {
       background: transparent;
@@ -177,7 +181,9 @@ a.btn,
   &.danger {
     color: var(--clr-text-white);
     background: var(--clr-accent);
-    transition: background 200ms ease-in, color 200ms ease-in;
+    transition:
+      background 200ms ease-in,
+      color 200ms ease-in;
 
     &:hover {
       background: transparent;
@@ -189,7 +195,9 @@ a.btn,
   &.alert {
     color: var(--clr-text-black);
     background: var(--clr-alert);
-    transition: background 200ms ease-in, color 200ms ease-in;
+    transition:
+      background 200ms ease-in,
+      color 200ms ease-in;
 
     &:hover {
       background: transparent;
@@ -238,7 +246,6 @@ strong {
 }
 
 @media (min-width: 780px) {
-
   .wrapper,
   .hero-container,
   .title-container,
@@ -247,7 +254,15 @@ strong {
 
     display: grid;
     grid-template-columns:
-      [full-width-start breakout-left-start] 1fr [content-start content-left-start] minmax(min(100% - 3rem, var(--_max-content-width)), 1fr) [breakout-left-end content-left-end content-right-start breakout-right-start] minmax(min(100% - 3rem, var(--_max-content-width)), 1fr) [content-end content-right-end] 1fr [full-width-end breakout-right-end];
+      [full-width-start breakout-left-start] 1fr [content-start content-left-start] minmax(
+        min(100% - 3rem, var(--_max-content-width)),
+        1fr
+      )
+      [breakout-left-end content-left-end content-right-start breakout-right-start] minmax(
+        min(100% - 3rem, var(--_max-content-width)),
+        1fr
+      )
+      [content-end content-right-end] 1fr [full-width-end breakout-right-end];
   }
 
   .wrapper,
@@ -327,7 +342,7 @@ section {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
-.flow>*+* {
+.flow > * + * {
   margin-top: 1em;
 }
 
@@ -539,13 +554,10 @@ section:has(.cta-container) {
 }
 
 table {
-
   border-collapse: collapse;
   border: 2px solid var(--clr-primary);
   text-align: left;
   margin: auto;
-
-
 }
 
 .calender-table {
@@ -584,11 +596,9 @@ td {
   padding: 8px 10px;
 }
 
-tbody>tr:nth-of-type(even) {
+tbody > tr:nth-of-type(even) {
   background-color: rgb(237 238 242);
 }
-
-
 
 // USP SECTION
 .usp-list {
@@ -620,7 +630,7 @@ tbody>tr:nth-of-type(even) {
     .card-body {
       padding: 1rem 2rem;
 
-      >* {
+      > * {
         margin-bottom: 1em;
       }
 
